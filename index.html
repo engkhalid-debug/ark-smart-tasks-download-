@@ -60,8 +60,9 @@ footer small{display:block;opacity:.7;margin-top:4px}
 <body>
 <header class="top">
   <div class="wrap nav">
-    <a class="brand" href="#">
-      <svg viewBox="0 0 108 108" aria-hidden="true"><path fill="#0D2C54" d="M0 0h108v108H0z"/><path fill="#fff" d="M54 22 82 82H70L54 46 38 82H26z"/><path fill="#2E9E5B" d="M40 70l8 8 20-20-4-4-16 16-4-4z"/></svg>
+    <a class="brand" href="#" id="brand">
+      <img id="logo-img" alt="شعار آرك المتحدة" style="display:none;object-fit:contain">
+      <svg id="logo-svg" viewBox="0 0 108 108" aria-hidden="true"><path fill="#0D2C54" d="M0 0h108v108H0z"/><path fill="#fff" d="M54 22 82 82H70L54 46 38 82H26z"/><path fill="#2E9E5B" d="M40 70l8 8 20-20-4-4-16 16-4-4z"/></svg>
       <span><b>ARK UNITED | SMART TASKS</b><small>آرك المتحدة استشاريون ومقاولون</small></span>
     </a>
     <a class="btn btn-primary js-dl" href="#download">تحميل التطبيق</a>
@@ -70,21 +71,23 @@ footer small{display:block;opacity:.7;margin-top:4px}
 
 <div class="hero">
   <div class="wrap">
-    <span class="kicker">آرك المتحدة | إدارة المهام الذكية</span>
-    <h1>إدارة مهام فريقك الهندسي بذكاء</h1>
-    <p>نظام متخصص لتنظيم المهام اليومية ومتابعة الإنجاز وإدارة فريق آرك المتحدة.</p>
+    <span class="kicker" id="c-subtitle">آرك المتحدة | إدارة المهام الذكية</span>
+    <h1 id="c-title">إدارة مهام فريقك الهندسي بذكاء</h1>
+    <p id="c-desc">نظام متخصص لتنظيم المهام اليومية ومتابعة الإنجاز وإدارة فريق آرك المتحدة.</p>
     <div class="actions">
-      <a class="btn btn-primary js-dl" href="#download">تحميل تطبيق Android</a>
+      <a class="btn btn-primary js-dl js-dl-text" href="#download">تحميل تطبيق Android</a>
       <a class="btn btn-ghost" href="#features">المميزات</a>
     </div>
   </div>
 </div>
 
+<div class="wrap" id="hero-wrap" style="display:none;margin-top:-56px;position:relative"><img id="hero-img" alt="صورة التطبيق" style="width:100%;border-radius:18px;box-shadow:0 20px 50px rgba(11,36,71,.2)"></div>
+
 <section id="features">
   <div class="wrap">
     <h2 class="title">المميزات</h2>
     <p class="sub">كل ما يحتاجه المكتب لمتابعة العمل اليومي في تطبيق واحد عربي بالكامل.</p>
-    <div class="grid">
+    <div class="grid" id="feature-grid">
       <div class="card"><div class="ic">١</div><h3>إدارة المهام</h3><p>إنشاء المهام وتوزيعها على عدة مهندسين، مع الأولويات والمواعيد والتكرار اليومي والأسبوعي.</p></div>
       <div class="card"><div class="ic">٢</div><h3>متابعة الإنجاز</h3><p>لوحة تحكم بالمهام المنجزة والمتأخرة والمنتظرة للمراجعة، واعتماد الإنجاز من الإدارة.</p></div>
       <div class="card"><div class="ic">٣</div><h3>صلاحيات المستخدمين</h3><p>أدوار المالك والإدارة والموظفين، مطبّقة في التطبيق وفي قواعد أمان قاعدة البيانات.</p></div>
@@ -94,6 +97,13 @@ footer small{display:block;opacity:.7;margin-top:4px}
       <div class="card"><div class="ic">٧</div><h3>العمل دون إنترنت</h3><p>استمر في العمل دون اتصال، وتُزامن التغييرات تلقائيًا عند عودة الإنترنت.</p></div>
       <div class="card"><div class="ic">٨</div><h3>مشاركة المهام</h3><p>إرسال التكليفات اليومية والملخصات الأسبوعية عبر واتساب وSMS برسائل عربية منسقة.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="shots" style="display:none">
+  <div class="wrap">
+    <h2 class="title">لقطات من التطبيق</h2>
+    <div id="shot-list" style="display:flex;gap:14px;overflow-x:auto;padding-bottom:8px"></div>
   </div>
 </section>
 
@@ -123,12 +133,20 @@ footer small{display:block;opacity:.7;margin-top:4px}
   <div class="wrap">
     <h2 class="title">طريقة التثبيت</h2>
     <p class="sub">يتطلب Android 8.0 أو أحدث.</p>
-    <ol class="steps">
+    <ol class="steps" id="steps">
       <li>اضغط زر «تحميل تطبيق Android» من هاتفك لتنزيل ملف ARK-UNITED-SMART-TASKS.apk.</li>
       <li>افتح الملف من الإشعارات أو من مجلد التنزيلات.</li>
       <li>عند ظهور التنبيه، اسمح بتثبيت التطبيقات من هذا المصدر ثم اضغط «تثبيت».</li>
       <li>افتح التطبيق وأنشئ حسابك بالبريد الإلكتروني، ثم انتظر ربط حسابك من مالك التطبيق.</li>
     </ol>
+  </div>
+</section>
+
+<section id="contact" style="display:none">
+  <div class="wrap">
+    <h2 class="title">التواصل</h2>
+    <p id="contact-text" class="sub" style="white-space:pre-line"></p>
+    <div id="socials" style="display:flex;gap:10px;flex-wrap:wrap"></div>
   </div>
 </section>
 
@@ -138,6 +156,51 @@ footer small{display:block;opacity:.7;margin-top:4px}
 </footer>
 
 <script>
+/* Page settings published from the app (Firestore website/published; public, read-only).
+   Presentation only: text, colors, images. The download link always comes from the release manifest. */
+(function(){
+  var FS='https://firestore.googleapis.com/v1/projects/ark-smart-tasks/databases/(default)/documents/';
+  var KEY='AIzaSyAOW6whU1_MRJYJ9zGOcbs528UbRpptVwk';
+  var HOSTS=['wa.me','api.whatsapp.com','facebook.com','www.facebook.com','instagram.com','www.instagram.com','x.com','twitter.com','linkedin.com','www.linkedin.com','youtube.com','www.youtube.com','t.me'];
+  function okLink(u){u=String(u||'').trim();if(/^(mailto|tel):[^\s<"]{3,120}$/.test(u))return true;var m=/^https:\/\/([^\/?#]+)/.exec(u);return !!m&&HOSTS.indexOf(m[1].toLowerCase())>=0}
+  function okColor(c){return /^#[0-9a-fA-F]{6}$/.test(c||'')}
+  function okImg(d){return typeof d==='string'&&/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+\/=]+$/.test(d)}
+  function txt(id,v){var e=document.getElementById(id);if(e&&typeof v==='string'&&v)e.textContent=v}
+  function show(id,on){var e=document.getElementById(id);if(e)e.style.display=on?'':'none'}
+  function asset(id){
+    if(!/^[A-Za-z0-9_-]{1,40}$/.test(id||''))return Promise.resolve(null);
+    return fetch(FS+'website_assets/'+id+'?key='+KEY).then(function(r){return r.ok?r.json():null})
+      .then(function(j){var d=j&&j.fields&&j.fields.data&&j.fields.data.stringValue;return okImg(d)?d:null}).catch(function(){return null});
+  }
+  function list(id,items,make){var el=document.getElementById(id);if(!el||!Array.isArray(items))return;el.textContent='';items.slice(0,12).forEach(function(t,i){if(typeof t==='string'&&t)el.appendChild(make(t,i))})}
+  function apply(c){
+    if(!c||typeof c!=='object')return;
+    txt('c-title',c.title);txt('c-subtitle',c.subtitle);txt('c-desc',c.description);
+    if(c.downloadButton)document.querySelectorAll('.js-dl-text').forEach(function(a){a.textContent=c.downloadButton});
+    var root=document.documentElement.style;
+    if(okColor(c.primaryColor)){root.setProperty('--navy',c.primaryColor);root.setProperty('--navy2',c.primaryColor)}
+    if(okColor(c.accentColor))root.setProperty('--orange',c.accentColor);
+    list('feature-grid',c.features,function(t,i){var d=document.createElement('div');d.className='card';var ic=document.createElement('div');ic.className='ic';ic.textContent=(i+1).toLocaleString('ar-EG');var h=document.createElement('h3');h.textContent=t;d.appendChild(ic);d.appendChild(h);return d});
+    list('steps',c.installSteps,function(t){var li=document.createElement('li');li.textContent=t;return li});
+    show('features',c.showFeatures!==false);show('install',c.showInstall!==false);
+    var soc=document.getElementById('socials');soc.textContent='';
+    (Array.isArray(c.socials)?c.socials:[]).slice(0,8).forEach(function(s){if(s&&okLink(s.url)){var a=document.createElement('a');a.className='btn btn-ghost';a.style.cssText='background:var(--navy);color:#fff';a.href=s.url.trim();a.rel='noopener noreferrer';a.target='_blank';a.textContent=String(s.label||'رابط').slice(0,40);soc.appendChild(a)}});
+    txt('contact-text',c.contactText);
+    show('contact',c.showContact===true&&(!!c.contactText||soc.children.length>0));
+    var size={SMALL:36,MEDIUM:48,LARGE:64}[c.logoSize]||48;
+    asset(c.logoId).then(function(d){var img=document.getElementById('logo-img');if(d){img.src=d;img.style.width=img.style.height=size+'px';img.style.display='';show('logo-svg',false)}});
+    if(c.logoPosition==='CENTER')document.querySelector('.nav').style.justifyContent='center';
+    asset(c.heroImageId).then(function(d){if(d){document.getElementById('hero-img').src=d;show('hero-wrap',true)}});
+    var shots=Array.isArray(c.screenshotIds)?c.screenshotIds.slice(0,6):[];
+    Promise.all(shots.map(asset)).then(function(ds){var box=document.getElementById('shot-list');box.textContent='';ds.forEach(function(d){if(d){var im=document.createElement('img');im.src=d;im.alt='لقطة من التطبيق';im.loading='lazy';im.style.cssText='height:420px;max-width:80vw;border-radius:16px;border:1px solid var(--line)';box.appendChild(im)}});show('shots',c.showScreenshots!==false&&box.children.length>0)});
+  }
+  var cached=null;try{cached=JSON.parse(localStorage.getItem('ark-site')||'null')}catch(e){}
+  if(cached)apply(cached);
+  fetch(FS+'website/published?key='+KEY,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(j){
+    var raw=j&&j.fields&&j.fields.json&&j.fields.json.stringValue;if(!raw)return;
+    var c=JSON.parse(raw);apply(c);try{localStorage.setItem('ark-site',JSON.stringify(c))}catch(e){}
+  }).catch(function(){/* offline: keep cached or default design */});
+})();
 (function(){
   var PUB='https://raw.githubusercontent.com/engkhalid-debug/ark-smart-tasks-download-/main/release.json';
   fetch(PUB,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
